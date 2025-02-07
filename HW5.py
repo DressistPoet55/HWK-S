@@ -31,8 +31,8 @@ print(probel.rstrip())
 
 
 # Task 5
-#Имена собственные всегда начинаются с заглавной буквы, за которой следуют строчные буквы.
-#Исправьте данное имя собственное так, чтобы оно соответствовало этому утверждению.
+# Имена собственные всегда начинаются с заглавной буквы, за которой следуют строчные буквы.
+# Исправьте данное имя собственное так, чтобы оно соответствовало этому утверждению.
 # "pARiS" >> "Paris"
 
 task5 = "pARiS"
@@ -48,7 +48,7 @@ print(task6.split())
 
 
 # Task 7
-#"I love arrays they are my favorite" => ["I", "love", "arrays", "they", "are", "my", "favorite"]
+#   "I love arrays they are my favorite" => ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 tsk7 = 'I love arrays they are my favorite'
 print(tsk7.split())
@@ -58,10 +58,10 @@ print(tsk7.split())
 # Дан список: [Ivan, Ivanou], и 2 строки: Minsk, Belarus
 # Напечатайте текст: “Привет, Ivan Ivanou! Добро пожаловать в Minsk Belarus”
 
-l = [ 'Ivan' , 'Ivanou' ]
-strok1 = (" ".join(l))
-strok2 = 'Minsk, Belarus'
-print(f"Привет, {strok1} ! Добро пожаловать в {strok2} ")
+Line = ['Ivan', 'Ivanou']
+strokone = ("".join(Line))
+stroktwo = 'Minsk, Belarus'
+print(f"Привет, {strokone} ! Добро пожаловать в {stroktwo} ")
 
 
 # Task 9
@@ -69,12 +69,14 @@ print(f"Привет, {strok1} ! Добро пожаловать в {strok2} ")
 # сделайте из него строку => "I love arrays they are my favorite"
 
 spisok = ["I", "love", "arrays", "they", "are", "my", "favorite"]
-print(" ".join(spisok))
+print("".join(spisok))
 
 # Task 10
-# Создайте список из 10 элементов, вставьте на 3-ю позицию новое значение, удалите элемент из списка под индексом 6
+# Создайте список из 10 элементов, вставьте на 3-ю позицию новое значение,
+# удалите элемент из списка под индексом 6
 
 bigspisok = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-bigspisok.insert(2,'new_number')
+newnumber = 333
+bigspisok.insert(2, newnumber)
 del bigspisok[6]
 print(bigspisok)
