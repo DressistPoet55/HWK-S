@@ -59,7 +59,7 @@ print(tsk7.split())
 # Напечатайте текст: “Привет, Ivan Ivanou! Добро пожаловать в Minsk Belarus”
 
 Line = ['Ivan', 'Ivanou']
-strokone = ("".join(Line))
+strokone = " ".join(Line)
 stroktwo = 'Minsk, Belarus'
 print(f"Привет, {strokone} ! Добро пожаловать в {stroktwo} ")
 
