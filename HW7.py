@@ -25,10 +25,7 @@ print(numbsum1)
 print(numbsum2)
 
 
-
-
 # Task 2 Level Up
-
 
 experience = 10
 reward = 5
@@ -40,13 +37,10 @@ elif experience + reward < 15:
     print('Weak!(False)')
 
 
-
-
 # Task 3 Time converter
 
-
 wrongtime = '12:30'
-hh, mm=(wrongtime.split(':'))
+hh,mm = wrongtime.split(':')
 hh = int(hh)
 mm = int(mm)
 if hh >= 12:
