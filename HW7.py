@@ -39,19 +39,19 @@ elif experience + reward < 15:
 
 # Task 3 Time converter
 
-wrongtime = '12:30'
-hh, mm = wrongtime.split(':')
-hh = int(hh)
-mm = int(mm)
+wrongtime = '00:00'
+hh_str, mm_str = wrongtime.split(':')
+hh = int(hh_str)
+mm = int(mm_str)
+daytime: str
+
 if hh >= 12:
     if hh > 12:
         hh -= 12
-    if hh == 12:
-        hh = 12
     daytime = 'p.m.'
-    print(f"{hh}:{mm:02d} {daytime}")
-elif hh < 12:
+else:
     if hh == 0:
         hh = 12
     daytime = 'a.m.'
-    print(f"{hh}:{mm:02d} {daytime}")
+
+print(f"{hh}:{mm:02d} {daytime}")
