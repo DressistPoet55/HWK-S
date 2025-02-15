@@ -40,7 +40,7 @@ elif experience + reward < 15:
 # Task 3 Time converter
 
 wrongtime = '12:30'
-hh,mm = wrongtime.split(':')
+hh, mm = wrongtime.split(':')
 hh = int(hh)
 mm = int(mm)
 if hh >= 12:
