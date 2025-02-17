@@ -2,10 +2,10 @@
 
 motomin1 = 240
 motomin2 = 808
-currenthours1 = 240 // 60
-currenthours2 = 808 // 60
-currentmin1 = 240 % 60
-currentmin2 = 808 % 60
+currenthours1 = motomin1 // 60
+currenthours2 = motomin2 // 60
+currentmin1 = motomin1 % 60
+currentmin2 = motomin2 % 60
 # print(f'{currenthours1:02d}:{currentmin1:02d}')
 # print(f'{currenthours2:02d}:{currentmin2:02d}')
 
