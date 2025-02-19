@@ -41,10 +41,8 @@ statues = [6, 2, 3, 8]
 min_size = statues[0]
 max_size = statues[0]
 for size in statues:
-    if size < min_size:
-        min_size = size
-    if size > max_size:
-        max_size = size
+    min_size = min(min_size, size)
+    max_size = max(max_size, size)
 misstat = 0
 current_size = min_size
 while current_size <= max_size:
