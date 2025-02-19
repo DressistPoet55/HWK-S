@@ -26,11 +26,11 @@ while n <= N:
     st = 2 * n - 1
     i = 0
     while i < sp:
-        print(' ',end='')
+        print(' ', end='')
         i += 1
     x = 0
     while x < st:
-        print('*',end='')
+        print('*', end='')
         x += 1
     print()
     n += 1
