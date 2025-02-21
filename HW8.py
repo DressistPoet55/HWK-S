@@ -2,7 +2,7 @@
 # Загадано число 3219
 import random
 
-number = random.sample(range(0,4), 4)
+number = random.sample(range(0, 4), 4)
 while number:
     bull = 0
     cow = 0
