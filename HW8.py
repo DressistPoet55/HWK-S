@@ -1,6 +1,8 @@
 # Task 1 Быки и коровы
 # Загадано число 3219
-number = [3, 2, 1, 9]
+import random
+
+number = random.sample(range(0,4), 4)
 while number:
     bull = 0
     cow = 0
@@ -38,11 +40,8 @@ while n <= N:
 
 # Task 3 Статуи
 statues = [6, 2, 3, 8]
-min_size = statues[0]
-max_size = statues[0]
-for size in statues:
-    min_size = min(min_size, size)
-    max_size = max(max_size, size)
+min_size = min(statues)
+max_size = max(statues)
 misstat = 0
 current_size = min_size
 while current_size <= max_size:
