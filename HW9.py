@@ -11,6 +11,7 @@ def solution(sequence):
                 return False
     return True
 
+
 print(solution([1, 2, 3]))
 print(solution([1, 2, 1, 2]))
 print(solution([1, 3, 2, 1]))
@@ -18,10 +19,10 @@ print(solution([1, 2, 3, 4, 5, 3, 5, 6]))
 print(solution([40, 50, 60, 10, 20, 30]))
 
 
-
 # Task 2 Число напротив
 def opposite(n, f_number):
     return (f_number + n // 2) % n
+
 
 print(opposite(10, 6))
 print(opposite(10, 2))
@@ -43,6 +44,7 @@ def valid(card):
                 digit -= 9
         total_sum += digit
     return total_sum % 10 == 0
+
 
 print(valid(4561261212345464))
 print(valid(4561261212345467))
