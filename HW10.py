@@ -41,7 +41,7 @@ def bykvi(txt):
     reslt = ''
     schet_bykv = 0
     tek_bykv = ''
-    for i,b in enumerate(txt):
+    for _, b in enumerate(txt):
         pred_bykv = tek_bykv
         tek_bykv = b
         if tek_bykv == pred_bykv:
