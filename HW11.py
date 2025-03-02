@@ -55,19 +55,19 @@ print(add('a', 'b'))
 
 
 @typed(types=int)
-def add(a, b, c):
+def add1(a, b, c):
     return a + b + c
 
 
-print(add(5, 6, 7))
+print(add1(5, 6, 7))
 
 
 @typed(types=float)
-def add(a, b, c):
+def add2(a, b, c):
     return a + b + c
 
 
-print(add(0.1, 0.2, 0.4))
+print(add2(0.1, 0.2, 0.4))
 
 
 # Task 4 Функция кэширования *
