@@ -39,17 +39,14 @@ class Bank:
             return 'Депозитный счет закрыт'
 
 
-bank = Bank()
-client_id = "0000001"
-name = "Siarhei"
-start_balance = 1000
-years = 1
+bank1 = Bank()
 
 
-print(bank.register_client(client_id, name))
-print(bank.open_deposit_account(client_id, start_balance, years))
-print(bank.calc_deposit_interest_rate(client_id))
-print(bank.close_deposit(client_id))
+
+print(bank1.register_client("0000001", "Siarhei"))
+print(bank1.open_deposit_account("0000001", 1000, 1))
+print(bank1.calc_deposit_interest_rate("0000001"))
+print(bank1.close_deposit("0000001"))
 print()
 print()
 
@@ -64,32 +61,32 @@ class Book:
         self.reserv = None
         self.givenbook = None
 
-    def reserve(self, Reader):
+    def reserve(self, reader):
         if self.reserv is None:
-            self.reserv = Reader
-            return f'Книга {self.book_name} зарезервирована за {Reader.name}'
+            self.reserv = reader
+            return f'Книга {self.book_name} зарезервирована за {reader.name}'
         else:
             return 'Книга уже заревервирована'
 
-    def cancel_reserve(self, Reader):
-        if self.reserv == Reader:
+    def cancel_reserve(self, reader):
+        if self.reserv == reader:
             self.reserv = None
             return f'Резервация на книгу {self.book_name} отменена'
 
-    def get_book(self, Reader):
-        if self.givenbook is None and self.reserv == Reader:
-            self.givenbook = Reader
+    def get_book(self, reader):
+        if self.givenbook is None and self.reserv == reader:
+            self.givenbook = reader
             self.reserv = None
-            return f'Книга {self.book_name} выдана {Reader.name}'
+            return f'Книга {self.book_name} выдана {reader.name}'
         elif self.givenbook is not None:
             return f'Книга {self.book_name} уже выдана другому пользователю'
         else:
             return 'Вы не можете взять книгу, так как она не зарезервирована'
 
-    def return_book(self, Reader):
-        if self.givenbook == Reader:
+    def return_book(self, reader):
+        if self.givenbook == reader:
             self.givenbook = None
-            return f'Книга {self.book_name} возвращена {Reader.name}'
+            return f'Книга {self.book_name} возвращена {reader.name}'
         else:
             return 'У вас нет книги'
 
@@ -111,17 +108,17 @@ class Reader:
         return book.return_book(self)
 
 
-book = Book("The Hobbit", "Books by J.R.R. Tolkien", 400, "0006754023")
-vasya = Reader("Vasya")
-petya = Reader("Petya")
+book1 = Book("The Hobbit", "Books by J.R.R. Tolkien", 400, "0006754023")
+vasyas = Reader("Vasya")
+petyas = Reader("Petya")
 
 
-print(vasya.reserve_book(book))
-print(petya.reserve_book(book))
-print(vasya.cancel_reserve(book))
-print(petya.reserve_book(book))
-print(vasya.get_book(book))
-print(petya.get_book(book))
-print(vasya.return_book(book))
-print(petya.return_book(book))
-print(vasya.get_book(book))
+print(vasyas.reserve_book(book1))
+print(petyas.reserve_book(book1))
+print(vasyas.cancel_reserve(book1))
+print(petyas.reserve_book(book1))
+print(vasyas.get_book(book1))
+print(petyas.get_book(book1))
+print(vasyas.return_book(book1))
+print(petyas.return_book(book1))
+print(vasyas.get_book(book1))
