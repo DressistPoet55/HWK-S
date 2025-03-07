@@ -32,11 +32,13 @@ class Bank:
     def calc_deposit_interest_rate(self, client_id):
         if client_id in self.deposits:
             return self.deposits[client_id].calculate_final_amount()
+        return None
 
     def close_deposit(self, client_id):
         if client_id in self.deposits:
             del self.deposits[client_id]
             return 'Депозитный счет закрыт'
+        return 'Депозитный счет не найден'
 
 
 bank1 = Bank()
@@ -70,6 +72,7 @@ class Book:
         if self.reserv == reader:
             self.reserv = None
             return f'Резервация на книгу {self.book_name} отменена'
+        return 'Книга не зарезервирована за вами'
 
     def get_book(self, reader):
         if self.givenbook is None and self.reserv == reader:
