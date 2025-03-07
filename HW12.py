@@ -41,8 +41,6 @@ class Bank:
 
 bank1 = Bank()
 
-
-
 print(bank1.register_client("0000001", "Siarhei"))
 print(bank1.open_deposit_account("0000001", 1000, 1))
 print(bank1.calc_deposit_interest_rate("0000001"))
