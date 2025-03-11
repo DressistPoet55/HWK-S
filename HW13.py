@@ -1,8 +1,9 @@
 # Task 1 Колода карт
 import random
 
+
 class Card:
-    number_list = ['2','3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+    number_list = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
     mast_list = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 
     def __init__(self, number, must):
@@ -11,6 +12,7 @@ class Card:
 
     def __str__(self):
         return f"Card {self.must}, {self.number}"
+
 
 class CardsDeck:
     def __init__(self):
