@@ -1,3 +1,9 @@
+import re
+import xml.etree.ElementTree as ET
+import json
+import yaml
+
+
 # Task 1 Files
 # 1
 with open('students.txt', 'w') as file:
@@ -37,7 +43,6 @@ print()
 
 # Task 2 re
 # 2
-import re
 
 
 with open('dates.txt', 'w') as file:
@@ -49,7 +54,7 @@ with open('dates.txt', 'r') as file:
     print('Даты:', dates)
 print()
 
-#3
+# 3
 passwords = ['Pass123', '1234', 'abcd', 'ABCD', 'aB1']
 
 for password in passwords:
@@ -60,7 +65,7 @@ for password in passwords:
         print(f'Неверный пароль {password}')
 print()
 
-#4
+# 4
 sentence = ("Довольно распространённая ошибка ошибка — это лишний повтор повтор слова слова. "
             "Смешно, не не правда ли? Не нужно портить хор хоровод.")
 
@@ -74,7 +79,7 @@ print()
 
 # Task 3 XML
 # 5
-import xml.etree.ElementTree as ET
+
 
 def parsexml(xml_str):
     root = ET.fromstring(xml_str)
@@ -112,7 +117,6 @@ print()
 
 # Task 4
 # 6
-import json
 
 
 fk1 = {
@@ -131,12 +135,14 @@ fk3 = {
     'wins': 11
 }
 
-fks = [fk1,fk2,fk3]
+fks = [fk1, fk2, fk3]
 
 json_data = json.dumps(fks)
 
+
 def get_wins(club):
     return club['wins']
+
 
 max_wins_fk = max(fks, key=get_wins)
 
@@ -146,7 +152,6 @@ print()
 
 # Task 5 YAML
 # 7
-import yaml
 
 
 books = """
@@ -165,6 +170,7 @@ to_yaml = yaml.safe_load(books)
 with open('books.yaml', 'w') as library:
     yaml.dump(to_yaml, library)
 
+
 def add_book(file_name, title, author, year):
     with open(file_name, 'r') as file1:
         data = yaml.safe_load(file1)
@@ -172,6 +178,7 @@ def add_book(file_name, title, author, year):
     data.append(new_book)
     with open(file_name, 'w') as file1:
         yaml.safe_dump(data, file1)
+
 
 file_name1 = 'books.yaml'
 
