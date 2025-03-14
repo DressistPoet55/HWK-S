@@ -35,7 +35,7 @@ for student in students:
         group_info[group] = {'count': 0, 'total_grades': 0, 'total_students': 0}
 
     group_info[group]['count'] += 1
-    group_info[group]['total_grades'] += sum(map(int, student['grades']))
+    group_info[group]['total_grades'] += sum(student['grades'])
     group_info[group]['total_students'] += len(student['grades'])
 
 print(f"\nОбщее количество студентов: {total_students}")
