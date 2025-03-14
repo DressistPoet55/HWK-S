@@ -22,8 +22,7 @@ with open('students.txt', 'r', encoding="utf-8") as file:
         parts = line.strip().split(', ')
         name = parts[0]
         group = parts[1]
-        grades = parts[2:]
-        grades = list(map(int, grades))
+        grades = list(map(int, parts[2:]))
         students.append({'name': name, 'group': group, 'grades': grades})
 
 total_students = len(students)
@@ -32,15 +31,14 @@ group_info = {}
 for student in students:
     group = student['group']
     if group not in group_info:
-        group_info[group] = {'count': 0, 'total_grades': 0, 'total_students': 0}
+        group_info[group] = {'count': 0, 'total_grades': 0}
 
     group_info[group]['count'] += 1
     group_info[group]['total_grades'] += sum(student['grades'])
-    group_info[group]['total_students'] += len(student['grades'])
 
 print(f"\nОбщее количество студентов: {total_students}")
 for group, info in group_info.items():
-    avg_grade = info['total_grades'] / info['total_students']
+    avg_grade = info['total_grades'] / (info['count'] * 3)
     print(f"Группа {group}: {info['count']} студентов, Средняя оценка: {avg_grade:.2f}")
 print()
 
