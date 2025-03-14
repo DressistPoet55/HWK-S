@@ -12,18 +12,19 @@ with open('students.txt', 'w', encoding="utf-8") as file:
     file.write('Lok, Group2, 5, 8, 8\n')
     file.write('Mage, Group2, 9, 9, 8\n')
 
-with open('students.txt', 'r', encoding="utf-8") as file:
-    for line in file:
-        print(line, end='')
 
-students = []
-with open('students.txt', 'r', encoding="utf-8") as file:
-    for line in file:
-        parts = line.strip().split(', ')
-        name = parts[0]
-        group = parts[1]
-        grades = list(map(int, parts[2:]))
-        students.append({'name': name, 'group': group, 'grades': grades})
+def process_student_line(line):
+    parts = line.strip().split(', ')
+    name = parts[0]
+    group = parts[1]
+    grades = list(map(int, parts[2:]))
+    return {'name': name, 'group': group, 'grades': grades}
+
+def read_students_from_file(filename):
+    with open(filename, 'r', encoding="utf-8") as file:
+        return [process_student_line(line) for line in file]
+
+students = read_students_from_file('students.txt')
 
 total_students = len(students)
 group_info = {}
