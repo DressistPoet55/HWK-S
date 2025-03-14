@@ -16,13 +16,15 @@ with open('students.txt', 'w', encoding="utf-8") as file:
 def process_student_line(line):
     parts = line.strip().split(', ')
     name = parts[0]
-    group = parts[1]
+    groups = parts[1]
     grades = list(map(int, parts[2:]))
-    return {'name': name, 'group': group, 'grades': grades}
+    return {'name': name, 'group': groups, 'grades': grades}
+
 
 def read_students_from_file(filename):
-    with open(filename, 'r', encoding="utf-8") as file:
-        return [process_student_line(line) for line in file]
+    with open(filename, 'r', encoding="utf-8") as files:
+        return [process_student_line(line) for line in files]
+
 
 students = read_students_from_file('students.txt')
 
