@@ -60,7 +60,7 @@ passwords = ['Pass123', '1234', 'abcd', 'ABCD', 'aB1']
 
 for password in passwords:
     if len(password) >= 4 and re.search(r'[a-zA-Z]', password) and \
-        re.search(r'\d', password):
+            re.search(r'\d', password):
         print(f'Пароль {password} верный')
     else:
         print(f'Неверный пароль {password}')
