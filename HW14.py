@@ -6,17 +6,18 @@ import yaml
 
 # Task 1 Files
 # 1
-with open('students.txt', 'w') as file:
+with open('students.txt', 'w', encoding="utf-8") as file:
     file.write('Var, Group1, 9, 3, 1\n')
     file.write('Pal, Group1, 5, 6, 7\n')
     file.write('Lok, Group2, 5, 8, 8\n')
     file.write('Mage, Group2, 9, 9, 8\n')
 
-for line in open('students.txt'):
-    print(line, end='')
+with open('students.txt', 'r', encoding="utf-8") as file:
+    for line in file:
+        print(line, end='')
 
 students = []
-with open('students.txt', 'r') as file:
+with open('students.txt', 'r', encoding="utf-8") as file:
     for line in file:
         parts = line.strip().split(', ')
         name, group, *grades = parts
@@ -45,10 +46,10 @@ print()
 # 2
 
 
-with open('dates.txt', 'w') as file:
+with open('dates.txt', 'w', encoding="utf-8") as file:
     file.write('11.03.2025 в 18:00 пойдёт дождь, а 12.03.2025 снег \n')
 
-with open('dates.txt', 'r') as file:
+with open('dates.txt', 'r', encoding="utf-8") as file:
     content = file.read()
     dates = re.findall(r'\d{2}\.\d{2}\.\d{4}', content)
     print('Даты:', dates)
@@ -167,16 +168,16 @@ books = """
 """
 to_yaml = yaml.safe_load(books)
 
-with open('books.yaml', 'w') as library:
+with open('books.yaml', 'w', encoding="utf-8") as library:
     yaml.dump(to_yaml, library)
 
 
 def add_book(file_name, title, author, year):
-    with open(file_name, 'r') as file1:
+    with open(file_name, 'r', encoding="utf-8") as file1:
         data = yaml.safe_load(file1)
     new_book = {'title': title, 'author': author, 'year': year}
     data.append(new_book)
-    with open(file_name, 'w') as file1:
+    with open(file_name, 'w', encoding="utf-8") as file1:
         yaml.safe_dump(data, file1)
 
 
@@ -184,7 +185,7 @@ file_name1 = 'books.yaml'
 
 add_book(file_name1, "The Lord of the Rings: The Two Towers", "J. R. R. Tolkien", 1954)
 
-with open('books.yaml', 'r') as f:
+with open('books.yaml', 'r', encoding="utf-8") as f:
     templates = yaml.safe_load(f)
 
 print(templates)
