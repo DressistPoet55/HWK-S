@@ -22,7 +22,7 @@ with open('students.txt', 'r', encoding="utf-8") as file:
         parts = line.strip().split(', ')
         name, group = parts[0], parts[1]
         grades = parts[2:]
-        grades = list(map(str, grades))
+        grades = list(map(int, grades))
         students.append({'name': name, 'group': group, 'grades': grades})
 
 total_students = len(students)
