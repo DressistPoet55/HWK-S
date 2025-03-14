@@ -20,8 +20,9 @@ students = []
 with open('students.txt', 'r', encoding="utf-8") as file:
     for line in file:
         parts = line.strip().split(', ')
-        name, group, *grades = parts
-        grades = list(map(int, grades))
+        name, group = parts[0], parts[1]
+        grades = parts[2:]
+        grades = list(map(str, grades))
         students.append({'name': name, 'group': group, 'grades': grades})
 
 total_students = len(students)
@@ -33,7 +34,7 @@ for student in students:
         group_info[group] = {'count': 0, 'total_grades': 0, 'total_students': 0}
 
     group_info[group]['count'] += 1
-    group_info[group]['total_grades'] += sum(student['grades'])
+    group_info[group]['total_grades'] += sum(map(int, student['grades']))
     group_info[group]['total_students'] += len(student['grades'])
 
 print(f"\nОбщее количество студентов: {total_students}")
