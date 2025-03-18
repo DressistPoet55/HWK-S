@@ -10,6 +10,7 @@ class OrderStatus(Enum):
     COMPLETED = 'Заказ выдан'
     CANCELLED = 'Заказ отменён'
 
+
 class Order:
     def __init__(self, order_id, status=OrderStatus.PENDING):
         self.order_id = order_id
