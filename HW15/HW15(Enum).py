@@ -23,7 +23,7 @@ class Order:
             print('Некорректный ввод')
 
     def display_status(self):
-        print(f'Статус заказа {self.order_id}: {self.status.znach}')
+        print(f'Статус заказа {self.order_id}: {self.status.value}')
 
 
 order = Order(order_id=1234)
