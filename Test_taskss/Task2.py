@@ -4,6 +4,7 @@ def kvard_chisla():
     kvadr = chislo ** 2
     print(kvadr)
 
+
 def chet_or_not():
     chislo2 = int(input('Введите число: '))
     if chislo2 % 2 == 0:
