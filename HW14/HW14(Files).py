@@ -24,6 +24,7 @@ def read_students_from_file(filename):
 def get_students(filename):
     return read_students_from_file(filename)
 
+
 students = get_students('../students.txt')
 
 total_students = len(students)
