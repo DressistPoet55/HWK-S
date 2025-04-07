@@ -15,6 +15,7 @@ class TestDeposit(unittest.TestCase):
         result = deposit.calculate_final_amount()
         self.assertGreater(result, 0)
 
+
 class TestBank(unittest.TestCase):
     def setUp(self):
         self.bank = Bank()
@@ -22,11 +23,13 @@ class TestBank(unittest.TestCase):
 
     def test_register_client(self):
         result = self.bank.register_client("0000001", "Siarhei")
-        self.assertEqual(result, "Зарегистрирован клиент по имени Siarhei , и присвоен личный id 0000001")
+        self.assertEqual(result, "Зарегистрирован клиент по имени Siarhei ,"
+                                 " и присвоен личный id 0000001")
 
     def test_open_deposit_account(self):
         result = self.bank.open_deposit_account("0000001", 1000, 1)
-        self.assertEqual(result, "Открыт депозитный счет по id: 0000001, с балансом 1000 рублей на 1 лет")
+        self.assertEqual(result, "Открыт депозитный счет по id: 0000001,"
+                                 " с балансом 1000 рублей на 1 лет")
 
     def test_calc_deposit_interest_rate(self):
         self.bank.open_deposit_account("0000001", 1000, 1)
