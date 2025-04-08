@@ -6,6 +6,7 @@ logger = logging.getLogger("bank_logger")
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
+
 class Deposit:
     def __init__(self, start_balance, years, interest_rate=0.10):
         self.start_balance = start_balance

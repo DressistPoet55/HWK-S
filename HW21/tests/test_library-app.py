@@ -12,6 +12,7 @@ stream_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(messa
 logger.addHandler(stream_handler)
 logger.setLevel(logging.INFO)
 
+
 @pytest.fixture
 def library():
     book = Book("The Hobbit", "Books by J.R.R. Tolkien", 400, "0006754023")

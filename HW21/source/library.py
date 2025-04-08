@@ -6,6 +6,7 @@ logger = logging.getLogger("library_logger")
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
+
 class Book:
     def __init__(self, book_name, author, num_pages, isbn):
         self.book_name = book_name
