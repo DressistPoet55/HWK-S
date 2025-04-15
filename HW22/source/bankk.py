@@ -43,10 +43,10 @@ class Bank:
             return 'Депозитный счет закрыт'
         return 'Депозитный счет не найден'
 
+
 def create_bank():
-    """Создает экземпляр банка и возвращает его"""
     return Bank()
 
+
 def create_deposit(start_balance, years, interest_rate=0.10):
-    """Создает экземпляр депозита и возвращает его"""
     return Deposit(start_balance, years, interest_rate)
