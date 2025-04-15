@@ -1,0 +1,21 @@
+Экран логина:
+
+Ввод имени пользователя:            [id="user-name"]   (standard_user)
+Ввод пароля:                        [id="password"]   (secret_sauce)
+Нажате кнопки 'Login':              [id="login-button"]
+
+
+Экран главной страницы:
+
+Нажать на кнопку "Add to cart":     [id="add-to-cart-sauce-labs-backpack"]
+Нажать на кнопку "Shopping cart":   [class="shopping_cart_link"]
+
+
+Корзина:
+
+Нажать на кнопку "Checkout":        [id="checkout"]
+Ввод имени:                         [id="first-name"]   (First)
+Ввод фамилии:                       [name="lastName"]   (Last)
+Ввод почтового индекса:             [id="postal-code"]   (123456)
+Нажать на кнопку "Continue":        [name="continue"]
+Нажать на кнопку "Finish":          [class="btn btn_action btn_medium cart_button"]
