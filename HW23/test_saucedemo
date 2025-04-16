@@ -7,15 +7,23 @@
 
 Экран главной страницы:
 
+Проверить переход на главную
+ страницу (С помощью Products):     //*[@id="header_container"]/div[2]/span
+
 Нажать на кнопку "Add to cart":     [id="add-to-cart-sauce-labs-backpack"]
 Нажать на кнопку "Shopping cart":   [class="shopping_cart_link"]
 
 
 Корзина:
 
+Проверить переход в корзину
+    (С помощью "Your Cart"):        //*[@id="header_container"]/div[2]/span
 Нажать на кнопку "Checkout":        [id="checkout"]
 Ввод имени:                         [id="first-name"]   (First)
 Ввод фамилии:                       [name="lastName"]   (Last)
 Ввод почтового индекса:             [id="postal-code"]   (123456)
 Нажать на кнопку "Continue":        [name="continue"]
 Нажать на кнопку "Finish":          [class="btn btn_action btn_medium cart_button"]
+Проверить текст об успешном
+          оформлении заказа:        [class="complete-text"]
+
