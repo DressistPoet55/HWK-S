@@ -17,7 +17,7 @@ try:
     login_button.click()
     time.sleep(1)
 
-    #Экран главной страницы:
+    # Экран главной страницы:
     text_products = browser.find_element(By.XPATH, "//*[@id='header_container']/div[2]/span").text
     if "Products" in text_products:
         print("На главной странице: Products")
@@ -29,7 +29,7 @@ try:
     shp_cart.click()
     time.sleep(1)
 
-    #Корзина:
+    # Корзина:
     text_cart = browser.find_element(By.XPATH, "//*[@id='header_container']/div[2]/span").text
     if "Your Cart" in text_cart:
         print("В корзине: Your Cart")
