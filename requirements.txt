@@ -6,3 +6,6 @@ pylint
 pyyaml
 pytest
 pytest-html
+selenium
+requests
+Flask>=1.1.1
