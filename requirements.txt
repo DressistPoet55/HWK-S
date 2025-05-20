@@ -6,4 +6,3 @@ pylint
 pyyaml
 pytest
 pytest-html
-selenium
